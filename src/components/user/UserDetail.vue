@@ -5,7 +5,8 @@
          <router-link 
             tag="button" 
             :to="link"
-            class="btn btn-primary">Edit User</router-link>
+            class="btn btn-success">Edit User</router-link>
+            <hr>
     </div>
 </template>
 
@@ -24,6 +25,13 @@ export default {
                 },
                 hash: '#data'
             }
+        }
+    },
+    beforeRouteEnter(to, from, next) {
+        if(true) {
+            next()
+        } else {
+            next(false)
         }
     }
 }
